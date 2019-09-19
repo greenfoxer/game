@@ -35,20 +35,15 @@ namespace EGTEntities
             get { return name; }
             set { name = value; }
         }
-        ResourceType type;
+        ResourceType resourceType;
 
-        internal ResourceType Type
+        internal ResourceType ResourceType
         {
-            get { return type; }
-            set { type = value; }
+            get { return resourceType; }
+            set { resourceType = value; }
         }
-        ICollection<Location> locations;
 
-        public ICollection<Location> Locations
-        {
-            get { return locations; }
-            set { locations = value; }
-        }
+        public ICollection<Location> Locations { get; set; }
         bool isRare;
 
         public bool IsRare

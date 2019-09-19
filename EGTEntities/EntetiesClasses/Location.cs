@@ -60,6 +60,11 @@ namespace EGTEntities
             get { return purpose; }
             set { purpose = value; }
         }
+        public ICollection<Resource> Resources { get; set; }
+        public Location()
+        {
+            Resources = new List<Resource>();
+        }
         public Location(int id, int duration_base, int requirement_stamina,bool isConstant, LocationPurpose purpose, bool isActive,string name, string description="")
         { 
             this.id = id;

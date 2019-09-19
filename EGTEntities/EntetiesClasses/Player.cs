@@ -119,7 +119,7 @@ namespace EGTEntities
             get { return telegramID; }
             set { telegramID = value; }
         }
-        bool isActive, isApproved;
+        bool isActive, isApproved, isBusy;
 
         public bool IsApproved
         {
@@ -132,6 +132,12 @@ namespace EGTEntities
             get { return isActive; }
             set { isActive = value; }
         }
+        public bool IsBusy
+        {
+            get => isBusy;
+            set => isBusy = value;
+        }
+
         Class personClass;
 
         internal Class PersonClass
@@ -147,6 +153,20 @@ namespace EGTEntities
             set { personGroup = value; }
         }
 
+        public DateTime RegisterDate { get => registerDate; set => registerDate = value; }
+        public DateTime LastActionDate { get => lastActionDate; set => lastActionDate = value; }
+
+        DateTime registerDate;
+        DateTime lastActionDate;
+        public ICollection<Buff> Buffs { get; set; }
+        public ICollection<Equipment> Equipments { get; set; }
+
+        public Player()
+        {
+            Buffs = new List<Buff>();
+            Equipments = new List<Equipment>();
+        }
+
         public Player(int id)
         {
             this.id = id;
@@ -158,6 +178,8 @@ namespace EGTEntities
             isApproved = false;
             personClass = Class.Newbie;
             personGroup = Group.Newbie;
+            registerDate = DateTime.Now;
+            DateUpdate();
         }
         public Player(int id, int experience, int level, int attack, int defense, int honor, int extra, int stamina, int health, int carrying, int cookie, int donation, int extra_max, int stamina_max, int health_max, int carrying_max)
         {
@@ -175,9 +197,14 @@ namespace EGTEntities
             this.personClass = Class.Newbie;
             this.personGroup = Group.Newbie;
         }
+        void DateUpdate()
+        {
+            this.lastActionDate = DateTime.Now;
+        }   
         public void ChangeName(string newName)
         {
             this.name = newName;
+            DateUpdate();
         }
     }
 }

@@ -20,7 +20,5 @@ namespace EGTEntities
             get { return id; }
             set { id = value; }
         }
-
-        public Location Location { get; set; }
     }
 }
