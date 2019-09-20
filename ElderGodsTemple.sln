@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGTEntities", "EGTEntities\EGTEntities.csproj", "{C5B43667-8268-4E5D-ABAC-9EC135055000}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "egttest", "egttest\egttest.csproj", "{9C437E9D-3A6F-4915-A717-4F239F7681ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{3EAF1150-487C-4021-81B5-6EE044DCC00A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeProcessor", "RuntimeProcessor\RuntimeProcessor.csproj", "{F7432630-09AA-4FF4-9A60-8FA4BDC7CEAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3EAF1150-487C-4021-81B5-6EE044DCC00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EAF1150-487C-4021-81B5-6EE044DCC00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EAF1150-487C-4021-81B5-6EE044DCC00A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7432630-09AA-4FF4-9A60-8FA4BDC7CEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7432630-09AA-4FF4-9A60-8FA4BDC7CEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7432630-09AA-4FF4-9A60-8FA4BDC7CEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7432630-09AA-4FF4-9A60-8FA4BDC7CEAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
