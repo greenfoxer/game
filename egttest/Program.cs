@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EGTEntities;
-using System.Data.Entity;
-
-namespace egttest
+using egt.Classes;
+using egt.Logic.Services;
+using egt.Logic.Interfaces;
+using egt.Logic.DataTransferObjects;
+namespace egt.test
 {
     class Program
     {
         static void Main(string[] args)
         {
             int myId = 0;
-
+            //egt.Classes.UnitOfWork.UnitOfWork unit = new Classes.UnitOfWork.UnitOfWork();
+            //unit.GetRepository<egt.Classes.Entities.Player>().Add(new Classes.Entities.Player() {Name="lesha" });
+            PlayerInfo a = new PlayerInfo() { Name = "Alesha" };
+            IPlayerService data = new PlayerService();
+            //data.Add(a);
+            List<PlayerInfo> t = data.GetAll().Value.ToList();
+            egt.Logic.BusinessLogic.PlayerLogics ata = new Logic.BusinessLogic.PlayerLogics();
+            ata.CureHealth(11);
             //using (EGTEntities.DataContext db = new DataContext())
             //{
             //    //decimal? pppp = db.Players.Max(t => t.Id);

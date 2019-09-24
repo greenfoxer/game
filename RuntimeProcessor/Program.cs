@@ -27,7 +27,7 @@ namespace RuntimeProcessor
             new RuntimePseudo(1, 1, "walk", "walk_d*");
             new RuntimePseudo(1, 3, "itemtransfer", "itemtransfer_d*_d*_d*");
             ///////////////////////////////////////////////////////////////////////////
-            string cmd = "go";
+            string cmd = "/go_1";
             CommandParser(cmd);
         }
         static void CommandParser(string command)
