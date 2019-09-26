@@ -8,7 +8,11 @@ using egt.Logic.Interfaces;
 using AutoMapper;
 using egt.Classes.Entities;
 using egt.Classes.UnitOfWork;
-
+/////https://github.com/IgorBozhok/DisTelegramBot
+/////https://github.com/KyMback/YulBot
+/////https://github.com/GABAnich/HotelTelegramBot
+/////https://github.com/tarnenok/school-bot
+/////https://airbrake.io/blog/design-patterns/behavioral-command-design-pattern
 namespace egt.Logic.Services
 {
     public class PlayerService : BaseService, IPlayerService, IDisposable

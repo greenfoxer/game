@@ -7,6 +7,7 @@ using egt.Classes;
 using egt.Logic.Services;
 using egt.Logic.Interfaces;
 using egt.Logic.DataTransferObjects;
+using egt.Logic.BusinessLogic.Commands;
 namespace egt.test
 {
     class Program
@@ -19,6 +20,8 @@ namespace egt.test
             PlayerInfo a = new PlayerInfo() { Name = "Alesha" };
             IPlayerService data = new PlayerService();
             //data.Add(a);
+            CommandInvoker inv = new Logic.BusinessLogic.Commands.CommandInvoker();
+            inv.ProcessInput("/curehealth");
             List<PlayerInfo> t = data.GetAll().Value.ToList();
             egt.Logic.BusinessLogic.PlayerLogics ata = new Logic.BusinessLogic.PlayerLogics();
             ata.CureHealth(11);

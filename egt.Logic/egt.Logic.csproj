@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Commands\IGameCommand.cs" />
+    <Compile Include="BusinessLogic\Commands\CommandInvoker.cs" />
+    <Compile Include="BusinessLogic\Commands\CommandStatus.cs" />
+    <Compile Include="BusinessLogic\Commands\CureHealthCommand.cs" />
     <Compile Include="BusinessLogic\PlayerLogics.cs" />
     <Compile Include="DataTransferObjects\Area.cs" />
     <Compile Include="DataTransferObjects\Buff.cs" />
