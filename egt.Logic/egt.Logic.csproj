@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Commands\BaseCommand.cs" />
+    <Compile Include="BusinessLogic\Commands\GoCommand.cs" />
     <Compile Include="BusinessLogic\Commands\IGameCommand.cs" />
     <Compile Include="BusinessLogic\Commands\CommandInvoker.cs" />
     <Compile Include="BusinessLogic\Commands\CommandStatus.cs" />
